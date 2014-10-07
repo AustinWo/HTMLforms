@@ -1,7 +1,7 @@
 HTMLforms
 =========
 
-In my journey of learning to code, I created a sign-up form with HTML following TreeHouse video and code tutorial.
+On my journey of learning to code, I created a sign-up form with HTML following TreeHouse video and code tutorial.
 
 Create a simple sign-up form for an imaginary web app, Form wont submit anywhere since that requires additional server-side code.
 
