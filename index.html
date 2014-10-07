@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+<!-- action is the web address that process the info submitted through the form
+//method
+post: HTTP post method, send/ post to the server
+get: HTTP get method in url separated with '?' -->
+      <form action='index.html' method='post'>
+
+        <h1>Sign Up</h1>
+
+        <fieldset>
+
+            <legend><span class='number'>1</span> Your basic info</legend>
+
+            <label for='name'>Name:</label>
+            <!-- for matches with the same id -> name -->
+            <!-- when matched, if clicked on the label, focus on that input field with the id -->
+            <input type='text' id='name' name='user_name'>
+            <!-- Input is selfclosing -->
+            <!-- type: what kind of input we want: email, phone -->
+            <!-- Name is needed when form is submitted to the server to be processed -->
+
+            <label for='mail'>Email:</label>
+            <input type='email' id='mail' name='user_email'>
+            <label for'password'>Password:</label>
+            <input type='password' id='password' name='user_password'>
+
+            <label>Age:</label>
+            <!-- Dont have for attribute on this label because this is just general area -->
+            <input type='radio' id='under_13' value='under_13' name='user_age'><label for='under_13' class='light'>Under 13</label><br>
+            <input type='radio' id='over_13' value='over_13' name='user_age'><label for='over_13' class='light'>13 or Older</label>
+            <!-- these 2 radio buttons have same name attribute: select one unselect another because they are part of the same group-->
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend><span class='number'>2</span> Your profile</legend>
+
+            <label for='bio'>Bio:</label>
+            <textarea id='bio' name='user_bio'></textarea>
+            <!-- textarea is not a self closing tag -->
+            <!-- in most browser is resizable by user -->
+
+            <label for='job'>Job role:</label>
+            <select id='job' name='user_job'>
+                <optgroup label='Web'>
+                <!-- optgroups are not selectable -->
+                    <option value='frontend_developer'>Front-End Developer</option>
+                    <option value='php_developer'>PHP Developer</option>
+                    <option value='python_developer'>Python Developer</option>
+                    <option value='rails_developer'>Rails Developer</option>
+                    <option value='web_designer'>Web Designer</option>
+                    <option value='wordpress_developer'>Wordpress Developer</option>
+                </optgroup>
+                <optgroup label='Mobile'>
+                    <option value='android_developer'>Android Developer</option>
+                    <option value='ios_developer'>iOS Developer</option>
+                    <option value='mobile_designer'>Mobile Designer</option>
+                </optgroup>
+                <optgroup label='Business'>
+                    <option value='business_owner'>Business Owner</option>
+                    <option value='freelancer'>Freelancer</option>
+                </optgroup>
+
+            </select>
+
+            <label>Interests:</label>
+            <input type='checkbox' id='development' value='interest_development' name='user_interest'><label class='light' for='development'>Development</label><br>
+
+            <input type='checkbox' id='design' value='interest_design' name='user_interest'><label class='light' for='design'>Design</label><br>
+
+            <input type='checkbox' id='business' value='interest_business' name='user_interest'><label class='light' for='business'>Business</label>
+
+
+        </fieldset>
+
+        <button type='submit'>Sign up</button>
+        <!-- buttons are not self-closing -->
+        <!-- type 'submit' default will submit and send data to server -->
+        <!-- type 'reset' will clear the field -->
+        <!-- type 'button' no default behavior, intended to be used with js -->
+
+      </form>
+
+    </body>
+</html>
